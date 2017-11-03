@@ -1,0 +1,16 @@
+{
+  "name": "tap-es6-import",
+  "version": "1.0.0",
+  "description": "Tap and ecmascript modules",
+  "main": "foo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cjs": "tap foo_test.js",
+    "esm": "tap --node-arg=--experimental-modules foo_test.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tap": "^10.7.2"
+  }
+}
