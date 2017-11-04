@@ -4,9 +4,11 @@
   "description": "Tap and ecmascript modules",
   "main": "foo.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nyc -e .mjs node --experimental-modules foo_test.mjs",
     "cjs": "tap foo_test.js",
-    "esm": "tap --node-arg=--experimental-modules foo_test.mjs"
+    "esm": "tap --node-arg=--experimental-modules foo_test.mjs",
+    "ccjs": "nyc node foo_test.js",
+    "cesm": "nyc -e .mjs node --experimental-modules foo_test.mjs"
   },
   "author": "",
   "license": "ISC",
